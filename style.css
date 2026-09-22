@@ -1,0 +1,9 @@
+* {
+  list-style: none;
+  background-color:#fff1f8;
+}
+
+.lista-carrito {
+  display: flex;
+  align-items: center;
+}

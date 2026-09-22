@@ -1,0 +1,84 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "name": "Googly Eyes",
+            "price": 80000,
+            "img": "/assets/googly.jpg",
+            "detail": "Un diseño único por Veefoh. Mandanos una foto tuya y realizamos con este tilo una ilustración para que lleves de funda",
+            "category": "iphone"
+        },
+        {
+            "id": 2,
+            "name": "Lapiz Luz",
+            "price": 35000,
+            "img": "/assets/sketched.jpg",
+            "detail": "Pintado en lápices vibrantes combinado con crayones, resalta y levanta cualquier outfit",
+            "category": "samsung"
+        },
+        {
+            "id": 3,
+            "name": "Mia Mia",
+            "price": 80000,
+            "img": "/assets/trans-per.jpg",
+            "detail": "La funda rígida Mia Mia te brinda protección junto con la posibilidad de poder personalizarla al máximo con el pack de stickers que trae (sujeto a disponibilidad y sorpresa)",
+            "category": "tablet"
+        },
+        {
+            "id": 4,
+            "name": "Cisne de la Abue",
+            "price": 65000,
+            "img": "/assets/sawn.jpg",
+            "detail": "La funda para notebook de la abu, tiene su encanto y su protección",
+            "category": "notebook"
+        },
+        {
+            "id": 5,
+            "name": "Pink Miffy",
+            "price": 30000,
+            "img": "/assets/pink-miffy.jpg",
+            "detail": "Miffy pero en color rosa... que podría ser más tierno?",
+            "category": "iphone"
+        },
+        {
+            "id": 6,
+            "name": "Kitties",
+            "price": 75000,
+            "img": "/assets/kitties.jpg",
+            "detail": "Funda doble y reforzada, pero un diseño más que delicado.",
+            "category": "tablet"
+        },
+        {
+            "id": 7,
+            "name": "Vefooh Girl",
+            "price": 125000,
+            "img": "/assets/veefoh-per.jpg",
+            "detail": "Te quedaste con ganas de más cosas personalizadas por Veefoh? Ahora podes tambien encargar con una imagen tuya, un Pouch super suave para proteger tu compu",
+            "category": "notebook"
+        },
+        {
+            "id": 8,
+            "name": "Kitty Flip",
+            "price": 45000,
+            "img": "/assets/catcat-kitty.jpg",
+            "detail": "Salí de acá con un set completo para charmear tu Samsung FLip con Hellow Kitty.",
+            "category": "samsung"
+        },
+        {
+            "id": 9,
+            "name": "Tomates de la Huerta",
+            "price": 60000,
+            "img": "/assets/tomato.jpg",
+            "detail": "Una funda llena de sensaciones, especial para los ansiosos que a veces necesitan respirar y contar las cosas a su alrededor",
+            "category": "tablet"
+        },
+        {
+            "id": 10,
+            "name": "Denim Dream",
+            "price": 70000,
+            "img": "/assets/denim-dream.jpg",
+            "detail": "Un esitlo más street para todas las que quieren cambiar un poco más y les gusta resaltar",
+            "category": "notebook"
+        }
+    ]
+}
