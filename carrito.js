@@ -3,21 +3,26 @@ const app = Vue.createApp({
         return {
             productos: [],
             carrito: [],
-            buscar: "",
             categoria: "",
             activo: false,
             mostrarToast: false,
             productoAgregado: ""
         };
     },
+    
+    mounted(){
+        this.fetchApi();
+    },
+
     computed: {
         filter() {
-            if (this.categoria === ""){
+            if(this.categoria === ""){
                 return this.productos;
             }
-                return this.productos.filter((producto) =>
-                    producto.category === this.categoria
-            );
+
+            return this.productos.filter(
+                producto => producto.category === this.categoria
+            )
         },
         cantidadTotalProductos() {
             return this.carrito.reduce((total, item) => total + item.cantidad, 0);
@@ -28,32 +33,28 @@ const app = Vue.createApp({
     },
     methods: {
         async fetchApi() {
-            const res = await fetch("./products.json");
+            const res = await fetch("./productos.json");
             const data = await res.json();
             this.productos = data.productos;
         },
 
-        addCar(productos) {
-            const itemExistente = this.carrito.find(
-                (item) => item.id === productos.id,
-            );
-            if (itemExistente) {
-                itemExistente.cantidad++;
-            } else {
-                this.carrito.push({
-                    ...productos,
-                    cantidad: 1,
-                });
+        addItem(producto){
+            let indice = null
+            this.carrito.forEach((productos, index) => {
+                if(productos.id == producto.id){
+                    indice = index
+                    return
+                }
+            })
+            if(indice != null){
+                this.carrito[indice].cantidad++
+            }else{
+                producto.cantidad = 1
+                this.carrito.push(producto)
             }
-
-            this.productoAgregado = productos.name;
-            this.mostrarToast = true;
-            setTimeout(() => {
-                this.mostrarToast = false;
-            }, 8000);
         },
 
-        delPro(indice){
+        delItem(indice){
             if(this.carrito[indice].cantidad > 1){
                 this.carrito[indice].cantidad--;
             }else {
@@ -65,10 +66,13 @@ const app = Vue.createApp({
             this.carrito=[];
         }
 
-    },
-    mounted(){
-        this.fetchApi();
     }
 });
+
+app.component("listaproductos", Listaproductos);
+app.component("card", Card);
+app.component("carrito", Carrito);
+app.component("totalcantidad", TotalCantidad);
+app.component("totalprecio", TotalPrecio);
 
 app.mount("#carrito");
