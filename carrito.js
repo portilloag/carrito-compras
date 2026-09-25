@@ -55,7 +55,6 @@ const app = Vue.createApp({
             this.productoAgregado = producto.name;
             this.mostrarToast = true;
 
-
             setTimeout(() => {
                 this.mostrarToast = false;
             }, 6000);
@@ -80,13 +79,16 @@ const app = Vue.createApp({
 
         cerrarToast(){
             this.mostrarToast = false;
+        },
+
+        cerrarCar(){
+            this.activo = false;
         }
 
     }
 });
 
 app.component("listaproductos", Listaproductos);
-app.component("card", Card);
 app.component("carrito", Carrito);
 app.component("totalcantidad", TotalCantidad);
 app.component("totalprecio", TotalPrecio);

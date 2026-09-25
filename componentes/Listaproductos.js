@@ -11,7 +11,6 @@ const Listaproductos = {
         <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 list-none p-0">
           <li
             v-for="producto in item"
-            :key="producto.id"
             class="backdrop-blur-md border border-white/20 rounded-2xl  shadow-xl rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full"
           >
             <img

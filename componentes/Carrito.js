@@ -16,7 +16,7 @@ const Carrito = {
         delPro(indice){
             this.$emit("eliminar", indice);
         },
-        CerrarCar(){
+        cerrarCar(){
             this.$emit("cerrar");
         }
 
@@ -26,7 +26,7 @@ const Carrito = {
             
             <div class="flex justify-between items-center pb-4 border-b border-gray-100">
                 <h2 class="text-xs font-bold text-orange-500 tracking-wider uppercase">MI CARRITO</h2>
-                <button @click="CerrarCar" class="text-gray-400 hover:text-gray-600 text-lg">✕</button>
+                <button @click="cerrarCar" class="text-gray-400 hover:text-gray-600 text-lg">✕</button>
             </div>
            
             <div class="flex-grow overflow-y-auto py-2">
@@ -62,7 +62,7 @@ const Carrito = {
                                 </div>
 
                                 <strong class="text-sm font-bold text-gray-900">
-                                    $ {{ (producto.price * producto.cantidad).toLocaleString() }}
+                                    $ {{ (producto.price * producto.cantidad) }}
                                 </strong>
                             </div>
 
@@ -75,7 +75,6 @@ const Carrito = {
                     </li>
                 </ul>
             </div>
-
         
             <div class="pt-4 border-t border-gray-200 mt-auto">
                 <totalprecio :total="totalc"></totalprecio>
