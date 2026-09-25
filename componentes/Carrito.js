@@ -11,20 +11,23 @@ const Carrito = {
         delCar() {
             this.$emit("vaciar");
         },
-        addItem(producto) {
-            
-            this.$parent.addItem(producto);
-        },
+      addItem(producto) {
+        this.$emit("agregar", producto);
+    },
         delPro(indice){
             this.$emit("eliminar", indice);
+        },
+        CerrarCar(){
+            this.$emit("cerrar");
         }
+
     },
     template: `
         <div class="flex flex-col h-full">
             
             <div class="flex justify-between items-center pb-4 border-b border-gray-100">
                 <h2 class="text-xs font-bold text-orange-500 tracking-wider uppercase">MI CARRITO</h2>
-                <button @click="$parent.activo = false" class="text-gray-400 hover:text-gray-600 text-lg">✕</button>
+                <button @click="CerrarCar" class="text-gray-400 hover:text-gray-600 text-lg">✕</button>
             </div>
 
            
