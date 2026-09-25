@@ -24,7 +24,7 @@
      
       <nav class="relative">
         <button @click="activo = !activo" class="hamburguesa text-2xl p-2 flex items-center gap-2">
-          🛒 <span class="text-sm font-bold bg-orange-600 text-white px-2 py-0.5 rounded-full">{{ cantidadTotalProductos }}</span>
+          <totalcantidad :cantidad="cantidadTotalProductos"></totalcantidad>
         </button>
 
         <!-- Checkout sidebar -->
@@ -37,12 +37,12 @@
 
             <!-- Componente carrito -->
             <carrito
-              :carrito="carrito" 
-              :cantidadp="cantidadTotalProductos"
+              :carrito="carrito"
               :totalc="totalCarrito" 
+              @agregar="addItem"
               @quitar="delItem" 
               @vaciar="delCar"
-             @cerrar="activo = false"
+              @cerrar="activo = false"
               @eliminar="delPro">
             </carrito>
           </div>

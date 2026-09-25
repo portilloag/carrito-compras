@@ -1,7 +1,6 @@
 const Carrito = {
     props: {
         carrito: Array,
-        cantidadp: Number,
         totalc: Number,
     },
     methods: {
@@ -11,7 +10,7 @@ const Carrito = {
         delCar() {
             this.$emit("vaciar");
         },
-      addItem(producto) {
+        addItem(producto) {
         this.$emit("agregar", producto);
     },
         delPro(indice){
@@ -33,7 +32,7 @@ const Carrito = {
             <div class="flex-grow overflow-y-auto py-2">
                 <p v-if="carrito.length === 0" class="text-center text-gray-400 text-sm py-8">El carrito está vacío</p>
                 <ul v-else class="divide-y divide-gray-100">
-                    <li v-for="(producto, indice) in carrito" :key="indice" class="py-4 flex gap-3 items-center">
+                    <li v-for="(producto, indice) in carrito" class="py-4 flex gap-3 items-center">
                         <img 
                             :src="producto.img" 
                             :alt="producto.name" 
@@ -79,10 +78,7 @@ const Carrito = {
 
         
             <div class="pt-4 border-t border-gray-200 mt-auto">
-                <div class="flex justify-between font-bold text-gray-900 text-base mb-4">
-                    <span>Total:</span>
-                    <span>$ {{ totalc.toLocaleString() }}</span>
-                </div>
+                <totalprecio :total="totalc"></totalprecio>
 
                 <div class="flex gap-2">
                     <button @click="delCar" class="w-1/3 bg-gray-100 text-gray-700 text-xs font-medium py-3 rounded-lg hover:bg-gray-200 transition">

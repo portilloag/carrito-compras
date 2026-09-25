@@ -1,7 +1,6 @@
 const TotalCantidad = {
     props: ["cantidad"],
     template: `
-        <div>
-            <span class="font-bold text-gray-700 text-sm">Total artículos: {{ cantidad }}</span>
-        </div>`   
+           🛒 <span class="text-sm font-bold bg-orange-600 text-white px-2 py-0.5 rounded-full">{{ cantidad }}</span>
+        `   
 }

@@ -18,7 +18,7 @@ const Toast = {
       leave-to-class="opacity-0"
     >
       <div
-        v-show="mostrarToast"
+        v-show="mostrart"
         class="fixed bottom-5 right-5 z-50 flex items-center gap-3 bg-emerald-50 border border-emerald-200 text-emerald-900 px-4 py-3 rounded-xl shadow-lg max-w-sm"
         role="alert"
       >
@@ -26,7 +26,7 @@ const Toast = {
           ✓
         </div>
         <div class="text-xs font-medium pr-2">
-          <span class="font-bold text-emerald-950">{{ productoAgregado }}</span> se añadió al carrito.
+          <span class="font-bold text-emerald-950">{{ productoa }}</span> se añadió al carrito.
         </div>
         <button
           @click="cerrarToast"

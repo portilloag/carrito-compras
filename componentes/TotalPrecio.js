@@ -1,7 +1,8 @@
 const TotalPrecio = {
     props: ["total"],
     template: `
-        <div>
-            <span class="text-xl font-bold text-green-600">Total a pagar: $ {{ total }}</span>
+        <div class="flex justify-between font-bold text-gray-900 text-base mb-4">
+            <span>Total:</span>
+            <span>$ {{ total }}</span>
         </div>`   
 }
