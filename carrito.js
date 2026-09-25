@@ -76,6 +76,10 @@ const app = Vue.createApp({
 
         delCar() {
             this.carrito = [];
+        },
+
+        cerrarToast(){
+            this.mostrarToast = false;
         }
 
     }
@@ -86,5 +90,6 @@ app.component("card", Card);
 app.component("carrito", Carrito);
 app.component("totalcantidad", TotalCantidad);
 app.component("totalprecio", TotalPrecio);
+app.component("toast", Toast);
 
 app.mount("#carrito");

@@ -80,8 +80,15 @@
     </div>
 
     <!-- toast -->
+
+    <toast
+      :mostrart="mostrarToast"
+      :productoa="productoAgregado"
+      @cerrar="cerrarToast"
+    >
+    </toast>
     
-    <transition
+    <!-- <transition
       enter-active-class="transform ease-out duration-300 transition"
       enter-from-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
       enter-to-class="translate-y-0 opacity-100 sm:translate-x-0"
@@ -108,7 +115,7 @@
           ✕
         </button>
       </div>
-    </transition>
+    </transition> -->
 
   </div> 
 
@@ -132,6 +139,7 @@
   <script src="componentes/Carrito.js"></script>
   <script src="componentes/TotalCantidad.js"></script>
   <script src="componentes/TotalPrecio.js"></script>
+  <script src="componentes/Toast.js"></script>
   
   <script src="carrito.js"></script>
 </body>

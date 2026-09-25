@@ -29,8 +29,6 @@ const Carrito = {
                 <h2 class="text-xs font-bold text-orange-500 tracking-wider uppercase">MI CARRITO</h2>
                 <button @click="CerrarCar" class="text-gray-400 hover:text-gray-600 text-lg">✕</button>
             </div>
-
-           
            
             <div class="flex-grow overflow-y-auto py-2">
                 <p v-if="carrito.length === 0" class="text-center text-gray-400 text-sm py-8">El carrito está vacío</p>
