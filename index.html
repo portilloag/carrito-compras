@@ -11,24 +11,29 @@
   <link rel="icon" type="image/png" href="assets/icono.png" />
 </head>
 
-<body >
+<body class="bg-gradient-to-b from-pink-100 to-orange-200 min-h-screen">
   <div id="carrito" class="max-w-7xl mx-auto p-4">
     <header class="flex justify-between items-center mb-6 border-b pb-4">
-      <h1 class="text-2xl font-bold text-gray-800">Carrito de compras Vue</h1>
+      
+      <div class="flex items-center  w-full max-w-xl">
+  <h1 class="text-4xl font-bold text-gray-800">Carrito de compras Vue</h1>
+  <img src="assets/icono.png" alt="Logo" class="w-12 h-12 animacion-stop-motion">
+</div>
+     
 
      
       <nav class="relative">
         <button @click="activo = !activo" class="hamburguesa text-2xl p-2 flex items-center gap-2">
-          🛒 <span class="text-sm font-bold bg-blue-600 text-white px-2 py-0.5 rounded-full">{{ cantidadTotalProductos }}</span>
+          🛒 <span class="text-sm font-bold bg-orange-600 text-white px-2 py-0.5 rounded-full">{{ cantidadTotalProductos }}</span>
         </button>
 
         <!-- Checkout sidebar -->
         <div 
           v-show="activo" 
-          class="fixed inset-0 z-50 flex justify-end bg-black bg-opacity-40 transition-opacity"
+          class="  fixed inset-0 z-50 flex justify-end bg-black bg-opacity-40 transition-opacity"
           @click.self="activo = false"
         >
-          <div class="bg-white w-full max-w-md h-full p-6 shadow-2xl">
+          <div class=" sidebar-car w-full max-w-md h-full p-6 shadow-2xl">
 
             <!-- Componente carrito -->
             <carrito
@@ -51,7 +56,7 @@
 <div class="mb-6 max-w-xs relative">
   <select 
     v-model="categoria" 
-    class="w-full bg-transparent py-2 pr-8 pl-1 border-b-2 border-pink-500 text-gray-700 font-medium appearance-none focus:outline-none focus:border-blue-600 cursor-pointer transition-colors"
+    class="w-full bg-transparent py-2 pr-8 pl-1 border-b-2 border-pink-500 text-gray-700 font-medium appearance-none focus:outline-none focus:border-orange-600 cursor-pointer transition-colors"
   >
     <option value="">Todas</option>
     <option value="iphone">iPhone</option>
@@ -59,7 +64,7 @@
     <option value="notebook">Notebooks</option>
     <option value="tablet">Tablets</option>
   </select>
-  <!-- Flechita delgada alineada a la derecha -->
+  
   <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-1 text-gray-500">
     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -105,12 +110,27 @@
 
   </div> 
 
+  <!-- Footer -->
+<footer class="py-6 mt-12 border-t border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-4">
+    <div class="flex gap-6 text-sm font-medium text-gray-600"> 
+      <a href="#" class="hover:text-orange-600 transition-colors">Inicio</a>
+      <a href="#" class="hover:text-orange-600 transition-colors">Productos</a>
+      <a href="#" class="hover:text-orange-600 transition-colors">Contacto</a>
+    </div>
+
+    <div class="text-center text-gray-500 text-xs sm:text-sm">
+      &copy; 2026 Funky Studios. Todos los derechos reservados a Naiara Tymkiw y Andrea Portillo.
+    </div>
+  </div>
+</footer>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="componentes/Card.js"></script>
   <script src="componentes/Listaproductos.js"></script>
   <script src="componentes/Carrito.js"></script>
   <script src="componentes/TotalCantidad.js"></script>
   <script src="componentes/TotalPrecio.js"></script>
+  
   <script src="carrito.js"></script>
 </body>
 </html>

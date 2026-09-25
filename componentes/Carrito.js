@@ -12,7 +12,7 @@ const Carrito = {
             this.$emit("vaciar");
         },
         addItem(producto) {
-            // Emitimos evento o reutilizamos el método del padre para sumar
+            
             this.$parent.addItem(producto);
         },
         delPro(indice){
@@ -23,7 +23,7 @@ const Carrito = {
         <div class="flex flex-col h-full">
             
             <div class="flex justify-between items-center pb-4 border-b border-gray-100">
-                <h2 class="text-xs font-bold text-gray-500 tracking-wider uppercase">MY SHOPPING CART</h2>
+                <h2 class="text-xs font-bold text-orange-500 tracking-wider uppercase">MI CARRITO</h2>
                 <button @click="$parent.activo = false" class="text-gray-400 hover:text-gray-600 text-lg">✕</button>
             </div>
 
@@ -87,7 +87,7 @@ const Carrito = {
                     <button @click="delCar" class="w-1/3 bg-gray-100 text-gray-700 text-xs font-medium py-3 rounded-lg hover:bg-gray-200 transition">
                         Vaciar
                     </button>
-                    <button class="w-2/3 bg-blue-600 text-white text-xs font-bold py-3 rounded-lg hover:bg-blue-700 transition">
+                    <button class="w-2/3 bg-orange-600 text-white text-xs font-bold py-3 rounded-lg hover:bg-orange-700 transition">
                         Checkout
                     </button>
                 </div>

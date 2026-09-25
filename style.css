@@ -1,5 +1,8 @@
 * {
   list-style: none;
+}
+
+body{
   background-color:#fff1f8;
 }
 
@@ -17,8 +20,27 @@
   cursor: pointer;
 }
 
+.sidebar-car{
+  background-color: #fff1f8;
+}
+@keyframes stopMotionBalanceo {
+  0% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateX(6px) rotate(8deg);
+  }
+  50% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(-8deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
 
-
-.card-hueso {
-  background-color: #fdfbf7 !important;
-} 
+.animacion-stop-motion {
+  animation: stopMotionBalanceo 0.8s steps(1) infinite;
+}

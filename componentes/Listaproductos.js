@@ -12,26 +12,26 @@ const Listaproductos = {
           <li
             v-for="producto in item"
             :key="producto.id"
-            class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full"
+            class="backdrop-blur-md border border-white/20 rounded-2xl  shadow-xl rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full"
           >
             <img
               :src="producto.img"
               :alt="producto.alt"
-              class="w-full h-48 object-cover"
+              class="w-full h-80 object-cover"
             />
             <div class="p-4 flex flex-col flex-grow">
-              <!-- Textos pegados arriba -->
+             
               <div class="space-y-1.5">
                 <h3 class="text-base font-bold text-gray-900 leading-snug">{{ producto.name }}</h3>
                 <p class="text-green-600 font-bold text-lg">$ {{ producto.price }}</p>
                 <p class="text-gray-500 text-xs leading-relaxed line-clamp-3">{{ producto.detail }}</p>
               </div>
 
-              <!-- Botón alineado abajo -->
+         
               <div class="mt-auto pt-4">
                 <button 
                   @click="addItem(producto)" 
-                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-lg transition text-sm shadow-sm active:scale-95"
+                  class="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2.5 px-4 rounded-lg transition text-sm shadow-sm active:scale-95"
                 >
                   Agregar al carrito
                 </button>
