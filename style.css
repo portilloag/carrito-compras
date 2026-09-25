@@ -1,5 +1,6 @@
 * {
   list-style: none;
+  scroll-behavior: smooth;
 }
 
 body{
